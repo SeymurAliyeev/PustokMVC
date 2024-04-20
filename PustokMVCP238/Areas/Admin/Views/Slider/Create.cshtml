@@ -1,0 +1,43 @@
+﻿@model Slider
+<div class="container-fluid">
+    <h1>Create</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title1</label>
+            <input asp-for="Title1" class="form-control">
+            <span asp-validation-for="Title1" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title2</label>
+            <input asp-for="Title2" class="form-control">
+            <span asp-validation-for="Title2" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Desc</label>
+            <input asp-for="Desc" class="form-control">
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">RedirectUrl</label>
+            <input asp-for="RedirectUrl" class="form-control">
+            <span asp-validation-for="RedirectUrl" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">RedirectUrlText</label>
+            <input asp-for="RedirectUrlText" class="form-control">
+            <span asp-validation-for="RedirectUrlText" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Deactive</label>
+            <input asp-for="IsDeleted" class="form-control">
+            <span asp-validation-for="IsDeleted" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ImageFile</label>
+            <input asp-for="ImageFile" class="form-control">
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

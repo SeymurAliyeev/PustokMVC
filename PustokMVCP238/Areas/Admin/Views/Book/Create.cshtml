@@ -1,0 +1,94 @@
+﻿@model Book
+@{
+    List<Genre> genres = ViewBag.Genres;
+    List<Author> authors = ViewBag.Authors;
+}
+<div class="container-fluid">
+    <h1>Create</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Desc</label>
+            <input asp-for="Desc" class="form-control">
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">BookCode</label>
+            <input asp-for="BookCode" class="form-control">
+            <span asp-validation-for="BookCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">CostPrice</label>
+            <input asp-for="CostPrice" class="form-control">
+            <span asp-validation-for="CostPrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">SalePrice</label>
+            <input asp-for="SalePrice" class="form-control">
+            <span asp-validation-for="SalePrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">DiscountPercent</label>
+            <input asp-for="DiscountPercent" class="form-control">
+            <span asp-validation-for="DiscountPercent" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">StockCount</label>
+            <input asp-for="StockCount" class="form-control">
+            <span asp-validation-for="StockCount" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Category</label>
+            <select asp-for="GenreId" asp-items="@(new SelectList(genres,"Id","Name"))"></select>
+            <span asp-validation-for="GenreId" class="text-danger"></span>
+            <select asp-for="AuthorId" asp-items="@(new SelectList(authors,"Id","Fullname"))"></select>
+            <span asp-validation-for="AuthorId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsBestSeller</label>
+            <input asp-for="IsBestSeller" class="form-control">
+            <span asp-validation-for="IsBestSeller" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsFeatured</label>
+            <input asp-for="IsFeatured" class="form-control">
+            <span asp-validation-for="IsFeatured" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsNew</label>
+            <input asp-for="IsNew" class="form-control">
+            <span asp-validation-for="IsNew" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsAvailable</label>
+            <input asp-for="IsAvailable" class="form-control">
+            <span asp-validation-for="IsAvailable" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsDeleted</label>
+            <input asp-for="IsDeleted" class="form-control">
+            <span asp-validation-for="IsDeleted" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">PosterImageFile</label>
+            <input asp-for="PosterImageFile" class="form-control">
+            <span asp-validation-for="PosterImageFile" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">HoverImageFile</label>
+            <input asp-for="HoverImageFile" class="form-control">
+            <span asp-validation-for="HoverImageFile" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ImageFiles</label>
+            <input asp-for="ImageFiles" class="form-control">
+            <span asp-validation-for="ImageFiles" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
